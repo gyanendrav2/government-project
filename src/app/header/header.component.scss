@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+.header {
+  &__info {
+    background-color: $red;
+    padding: 0.2rem $gapLR;
+    &__leftdetails {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: $white;
+      p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+  &__banner {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url("../../assets/images/dotm-banner.png");
+      opacity: 0.5;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &__info {
+      padding: 2rem;
+      p {
+        text-align: center;
+        color: $black;
+        font-size: 2rem;
+      }
+    }
+  }
+}
